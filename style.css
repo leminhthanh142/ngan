@@ -1,0 +1,303 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+:root {
+    --font-family-1: 'Lato', sans-serif;
+    --font-family-2: 'Montserrat', sans-serif;
+}
+html {
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    line-height: 120%;
+    font-family: var(--font-family-2);
+}
+
+h1, h2, h3 {
+    font-family: 'Sansita Swashed', cursive;
+}
+h3 {
+    font-size: 200%;
+    margin-bottom: 20px;
+    position: relative;
+    padding: 12px 0;
+    transition: 0.4s;
+}
+
+h3:after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    border-radius: 50px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.4s;
+    background: #145C8C;
+}
+.preamble:hover h3:after,
+.explanation:hover h3:after,
+.participation:hover h3:after,
+.benefits:hover h3:after,
+.requirements:hover h3:after {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+.preamble:hover h3,
+.explanation:hover h3,
+.participation:hover h3,
+.benefits:hover h3,
+.requirements:hover h3 {
+    background: #145C8C;
+    background: -webkit-linear-gradient(to right, #145C8C 0%, #73FFCB 100%);
+    background: -moz-linear-gradient(to right, #145C8C 0%, #73FFCB 100%);
+    background: linear-gradient(to right, #145C8C 0%, #73FFCB 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    margin: 10px 0;
+}
+header {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("images/background.jpg") no-repeat fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+header h1 {
+    color: #e3edff;
+    font-size: 500%;
+    letter-spacing: 10px;
+    margin: 70px 0;
+    text-align: center;
+    font-weight: 300;
+    /*animation: animate 10s infinite;*/
+    background: #29AECF;
+    background: -webkit-linear-gradient(to right, #29AECF 0%, #44CFAF 100%);
+    background: -moz-linear-gradient(to right, #29AECF 0%, #44CFAF 100%);
+    background: linear-gradient(to right, #29AECF 0%, #44CFAF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 100%;
+}
+@keyframes animate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(270deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+header h2 {
+    color: #e3edff;
+    font-size: 170%;
+    font-style: italic;
+    letter-spacing: 6px;
+    margin: 20px;
+    text-align: center;
+}
+
+header div p {
+    font-family: var(--font-family-2);
+    color: #e3edff;
+    margin: 10px 0;
+    text-align: center;
+    font-style: italic;
+    font-size: 80%;
+}
+
+header div p a {
+    color: #e3edff;
+    padding: 10px;
+    transition: 0.4s;
+    border-radius: 8px;
+}
+
+header div p a:hover {
+    background: rgba(255,255,255,0.4);
+}
+
+.preamble {
+    padding: 80px 5%;
+    background: rgb(237,237,237);
+    font-size: 80%;
+}
+.preamble p {
+    text-align: justify;
+}
+.explanation {
+    padding: 80px 5%;
+    text-align: justify;
+    font-size: 80%;
+}
+.participation a,
+.benefits a,
+.requirements a {
+    color: cadetblue;
+    font-style: italic;
+}
+.participation a:hover,
+.benefits a:hover,
+.requirements a:hover {
+    text-decoration: underline;
+}
+
+.participation {
+    padding: 80px 5% 20px 5%;
+    background: rgb(237,237,237);
+    text-align: justify;
+    font-size: 80%;
+}
+.benefits {
+    padding: 20px 5% 80px 5%;
+    background: rgb(237,237,237);
+    text-align: justify;
+    font-size: 80%;
+}
+.requirements {
+    padding: 80px 5%;
+    text-align: justify;
+    font-size: 80%;
+}
+footer {
+    padding: 60px;
+    background: rgb(21,67,71);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #e3edff;
+    text-align: center;
+    font-size: 80%;
+}
+
+footer p {
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: #e3edff;
+}
+footer div a {
+    color: #e3edff;
+    margin: 0 8px;
+    padding: 10px;
+    position: relative;
+}
+
+footer div a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #e3edff;
+    height: 2px;
+    transform: scaleX(0);
+    transition: 0.4s;
+}
+footer div a:hover:after {
+    transform: scaleX(1);
+}
+.wrapper {
+    background: rgb(237,237,237);
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 5%;
+    border-top: 1px solid rgba(0,0,0,0.07);
+    font-size: 80%;
+}
+
+.design-selection ul li,
+.zen-resources ul li,
+.design-archives ul li {
+    margin: 8px 0;
+}
+
+.design-selection ul li span {
+    font-style: italic;
+    font-size: 75%;
+    margin: 0 3px;
+}
+
+.design-selection ul li a,
+.zen-resources ul li a,
+.design-archives ul li a {
+    color: black;
+}
+
+.design-selection ul li a:hover,
+.zen-resources ul li a:hover,
+.design-archives ul li a:hover {
+    color: cadetblue;
+}
+
+.indicator {
+    font-size: 120%;
+    transition: 0.4s;
+}
+.next a:hover span {
+    transform: translateX(10px);
+}
+
+
+@media screen and (max-width: 1000px) {
+    html {
+        font-size: 19px;
+    }
+    header h1 {
+        font-size: 450%;
+    }
+    header h2 {
+        font-size: 150%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    html {
+        font-size: 17px;
+    }
+    header h1 {
+        font-size: 400%;
+        line-height: 100%;
+    }
+    header h2 {
+        font-size: 130%;
+        line-height: 100%;
+    }
+    h3 {
+        font-size: 150%;
+    }
+    p, a {
+        font-size: 90%;
+    }
+    .wrapper {
+        flex-direction: column;
+    }
+    .design-selection nav li {
+        display: inline-block;
+        width: 40%;
+        margin: 10px 20px 20px 0;
+    }
+    .zen-resources ul li {
+        display: inline-block;
+        width: 40%;
+        margin: 10px 20px 20px 0;
+    }
+}
